@@ -1,0 +1,167 @@
+:root {
+	/* 31c */
+	--main-bg-color: #ececec;
+}
+
+/* 22C-2 */
+
+.box-model {
+	/* ID24c-24F */
+	margin: 1rem;
+	padding: 2rem;
+	border: 1rem black solid;
+	box-sizing: border-box;
+	/* background: #dedede; */
+	/* ID25 */
+	float: right;
+	display: flex;
+	/* ID23D-E */
+	font-weight: 800;
+	color: purple;
+	font-size: 34px;
+	/* 31c */
+	background: var(--main-bg-color)
+}
+
+body {
+	/* ID23F */
+	background-image: url(https://pbs.twimg.com/profile_images/758541075564761088/xL5ILamo_400x400.jpg);
+	height: 2000vw;
+}
+
+/* 22C-5 */
+
+.box-model+.flex {
+	background-image: url(https://pbs.twimg.com/profile_images/758541075564761088/xL5ILamo_400x400.jpg);
+}
+
+.flex {
+	/* 27c-g */
+	display: flex;
+	flex-direction: row-reverse;
+	flex-wrap: nowrap;
+	justify-content: space-around;
+	align-items: center;
+	width: 100%;
+	height: 150px;
+}
+
+/* 22C-3 */
+
+.flex div {
+	color: blue;
+	box-shadow: 5rem 5rem 5rem 5rem;
+}
+
+/* 22C-4 */
+
+.flex>#fixed {
+	/* 25c-3 */
+	position: fixed;
+	height: 200px;
+	width: 300px;
+	text-align: center;
+	left: 300px;
+	bottom: 700px;
+	background: linear-gradient(to right, red, orange, yellow, green, blue, purple);
+	color: white;
+}
+
+.relative {
+	/* 25c-1 */
+	position: relative;
+	background: green;
+	height: 15px;
+	width: 200px;
+	top: -100px;
+}
+
+/* 22C-1 */
+
+#absolute {
+	/* 25c-2 */
+	position: absolute;
+	right: 20;
+	bottom: 5px;
+	background: cyan;
+	width: 70px;
+	/* 30E */
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+/* 28C */
+
+@keyframes why {
+	0% {
+		background: linear-gradient(to right, red, orange, yellow, green, blue, purple);
+		transform: rotate(0deg);
+	}
+	50% {
+		background: linear-gradient(to right, purple, blue, green, yellow, red, orange);
+	}
+	100% {
+		background: linear-gradient(to right, red, orange, yellow, green, blue, purple);
+		transform: rotate(360deg);
+	}
+}
+
+.wackyAnimation {
+	/* 28D/28E */
+	animation: why 1s linear infinite;
+	transition: width 1s;
+	width: 20rem;
+}
+
+/* 26H */
+
+.wackyAnimation:hover {
+	width: 30rem;
+	height: 5rem;
+}
+
+/* 29C-D */
+
+@media screen and (max-width: 990px) {
+	.wackyAnimation {
+		display: none;
+	}
+}
+
+.grid {
+	/* 31D */
+	display: grid;
+	grid-template-columns: 15rem 15rem 15rem;
+	grid-auto-rows: 100px 100px 100px;
+	width: 500px;
+	height: 500px;
+}
+
+/* 26L */
+
+.grid :nth-child(2) {
+	background: salmon;
+}
+
+.gridtwothree {
+	grid-column-start: 3;
+	grid-row-start: 3;
+}
+
+/* 26e */
+
+.disabled:disabled {
+	background: blue;
+}
+
+/* 26G */
+
+.focus:focus {
+	color: pink;
+	background: greenyellow;
+}
+
+custom-element {
+	background: blue
+}
